@@ -1,7 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../Button"
 import LandingLogo from "../../img/Landing page image.svg"
 
 const Landing = () => {
+    const navigate = useNavigate();
+    const navigateHandler = (e) => {
+        e.preventDefault()
+        navigate("/create");
+    }
   return (
     <div className="landing">
         <header>
@@ -17,7 +23,7 @@ const Landing = () => {
         <div className="middle">
             <img src={LandingLogo} alt="landing-logo" />
         </div>
-        <Button version='landing' text='Create my event'/>
+        <Button text='Create my event' onClick={navigateHandler}/>
     </div>
     
 

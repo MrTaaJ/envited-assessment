@@ -3,11 +3,19 @@ body {
   background-color: #DDDDDD;
 }
 
-header,
-.landing {
+.landing, 
+.create {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
   display: grid;
   align-items: center;
-  align-content: center;
+  justify-content: center;
 }
 
 .title {
@@ -65,8 +73,4 @@ header,
   color: #FFFFFF;
   border: none;
   border-radius: 10px;
-}
-
-.btn-landing {
-  width: 187px;
 }
